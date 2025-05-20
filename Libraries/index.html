@@ -1,0 +1,2791 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.vglang.com/Libraries/">
+      
+      
+        <link rel="prev" href="../Comments/">
+      
+      
+        <link rel="next" href="../PackageManager/">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Overview - VG Language Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#212121" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#libraries-in-vg-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VG Language Documentation" class="md-header__button md-logo" aria-label="VG Language Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VG Language Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="#212121" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="#121212" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Introduction/" class="md-tabs__link">
+          
+  
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Statements/" class="md-tabs__link">
+          
+  
+  
+  Syntax
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Libraries
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DocumentationGenerator/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Functions/" class="md-tabs__link">
+          
+  
+  
+  Advanced
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VG Language Documentation" class="md-nav__button md-logo" aria-label="VG Language Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    VG Language Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Syntax
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Syntax
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Control Flow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../if-statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    If Statements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Loops
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Loops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../for-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../while-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    While Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../do-while-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Do-While Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Constants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Libraries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importing-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Libraries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      MathLib
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MathLib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guilibrary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guilibrary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guilibrary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-ioevents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: IOEvents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Sound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegexLib
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RegexLib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: regex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlitelib" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLiteLib
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQLiteLib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: db
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      DateTime
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DateTime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: timestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io" class="md-nav__link">
+    <span class="md-ellipsis">
+      IO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oslib" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSLib
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSLib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: sys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#util" class="md-nav__link">
+    <span class="md-ellipsis">
+      Util
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Util">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Integer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-double" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Double
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: Boolean
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-calls-in-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Calls in Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PackageManager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DocumentationGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Generator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ErrorHandling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StructsAndEnums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structs and Enums
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SystemCalls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Calls
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="libraries-in-vg-language">Libraries in VG Language</h1>
+<p>VG Language comes with a rich set of built-in libraries that provide additional functionality for your programs.</p>
+<h2 id="importing-libraries">Importing Libraries</h2>
+<p>To use a library in your VG program, use the <code>import</code> statement:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import LibraryName.namespace;
+</code></pre></div>
+<p>You can import specific namespaces or functions from a library:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import MathLib.arithmetic;  ## Import the arithmetic namespace
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import Guilibrary.window.create;  ## Import a specific function
+</code></pre></div>
+<h2 id="standard-libraries">Standard Libraries</h2>
+<h3 id="mathlib">MathLib</h3>
+<p>Mathematical functions and constants.</p>
+<h4 id="namespace-arithmetic">Namespace: arithmetic</h4>
+<p>Functions for basic arithmetic operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add(a, b)</code></td>
+<td>Adds two numbers</td>
+<td><code>a</code>: First number<br><code>b</code>: Second number</td>
+<td>Sum of a and b</td>
+<td><code>arithmetic.add(5, 10)</code> → <code>15</code></td>
+</tr>
+<tr>
+<td><code>subtract(a, b)</code></td>
+<td>Subtracts second number from first</td>
+<td><code>a</code>: First number<br><code>b</code>: Second number</td>
+<td>Difference of a and b</td>
+<td><code>arithmetic.subtract(20, 5)</code> → <code>15</code></td>
+</tr>
+<tr>
+<td><code>multiply(a, b)</code></td>
+<td>Multiplies two numbers</td>
+<td><code>a</code>: First number<br><code>b</code>: Second number</td>
+<td>Product of a and b</td>
+<td><code>arithmetic.multiply(4, 3)</code> → <code>12</code></td>
+</tr>
+<tr>
+<td><code>divide(a, b)</code></td>
+<td>Divides first number by second</td>
+<td><code>a</code>: First number<br><code>b</code>: Second number</td>
+<td>Quotient of a and b</td>
+<td><code>arithmetic.divide(10, 2)</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>abs(x)</code></td>
+<td>Gets absolute value</td>
+<td><code>x</code>: Number</td>
+<td>Absolute value of x</td>
+<td><code>arithmetic.abs(-15)</code> → <code>15</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-constants">Namespace: constants</h4>
+<p>Mathematical constants.</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pi()</code></td>
+<td>Returns the value of π</td>
+<td>Approximately 3.14159</td>
+<td><code>constants.pi()</code> → <code>3.14159...</code></td>
+</tr>
+<tr>
+<td><code>e()</code></td>
+<td>Returns the value of e</td>
+<td>Approximately 2.71828</td>
+<td><code>constants.e()</code> → <code>2.71828...</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import MathLib.arithmetic;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import MathLib.constants;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>var pi = constants.pi();
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>var sum = arithmetic.add(5, 10);
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>var difference = arithmetic.subtract(20, 5);
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>var product = arithmetic.multiply(4, 3);
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>var quotient = arithmetic.divide(10, 2);
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>var absoluteValue = arithmetic.abs(-15);
+</code></pre></div>
+<h3 id="guilibrary">Guilibrary</h3>
+<p>GUI components for creating graphical applications.</p>
+<h4 id="namespace-window">Namespace: window</h4>
+<p>Functions for creating and managing windows.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>create(title, width, height)</code></td>
+<td>Creates a new window</td>
+<td><code>title</code>: Window title<br><code>width</code>: Window width<br><code>height</code>: Window height</td>
+<td>Window object</td>
+<td><code>window.create("My App", 800, 600)</code></td>
+</tr>
+<tr>
+<td><code>setBackgroundColor(window, color)</code></td>
+<td>Sets window background color</td>
+<td><code>window</code>: Window object<br><code>color</code>: Color (hex code)</td>
+<td>None</td>
+<td><code>window.setBackgroundColor(gameWindow, "#87CEEB")</code></td>
+</tr>
+<tr>
+<td><code>addComponentToWindow(window, component)</code></td>
+<td>Adds a component to window</td>
+<td><code>window</code>: Window object<br><code>component</code>: UI component</td>
+<td>None</td>
+<td><code>window.addComponentToWindow(gameWindow, image)</code></td>
+</tr>
+<tr>
+<td><code>launch(window)</code></td>
+<td>Displays the window</td>
+<td><code>window</code>: Window object</td>
+<td>None</td>
+<td><code>window.launch(gameWindow)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-image">Namespace: Image</h4>
+<p>Functions for creating and manipulating images.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>createImage(path, x, y, width, height)</code></td>
+<td>Creates an image component</td>
+<td><code>path</code>: Image file path<br><code>x</code>: X position<br><code>y</code>: Y position<br><code>width</code>: Width<br><code>height</code>: Height</td>
+<td>Image object</td>
+<td><code>Image.createImage("logo.png", 100, 100, 200, 200)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-ioevents">Namespace: IOEvents</h4>
+<p>Functions for handling user input events.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setOnKeyPress(window, callback)</code></td>
+<td>Sets key press event handler</td>
+<td><code>window</code>: Window object<br><code>callback</code>: Function to call when key is pressed</td>
+<td>None</td>
+<td>See example below</td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-sound">Namespace: Sound</h4>
+<p>Functions for playing audio.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playSound(path)</code></td>
+<td>Plays a sound file</td>
+<td><code>path</code>: Sound file path</td>
+<td>None</td>
+<td><code>Sound.playSound("click.wav")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_1">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import Guilibrary.window;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>import Guilibrary.Image;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>import Guilibrary.IOEvents;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>import Guilibrary.Sound;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>## Create a window
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>var gameWindow = window.create(&quot;My Application&quot;, 800, 600);
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>window.setBackgroundColor(gameWindow, &quot;#87CEEB&quot;);
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>## Add components
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>var image = Image.createImage(&quot;assets/logo.png&quot;, 100, 100, 200, 200);
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>window.addComponentToWindow(gameWindow, image);
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>## Set up event handling
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>IOEvents.setOnKeyPress(gameWindow, function(key) {
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    if (key == &quot;SPACE&quot;) {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        Sound.playSound(&quot;assets/click.wav&quot;);
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    }
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>});
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>## Display the window
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>window.launch(gameWindow);
+</code></pre></div>
+<h3 id="regexlib">RegexLib</h3>
+<p>Regular expression operations.</p>
+<h4 id="namespace-regex">Namespace: regex</h4>
+<p>Functions for pattern matching and text manipulation.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>findAll(text, pattern)</code></td>
+<td>Finds all matches of a pattern</td>
+<td><code>text</code>: Input text<br><code>pattern</code>: Regex pattern</td>
+<td>Array of matches</td>
+<td><code>regex.findAll("Hello world", "\\w+")</code></td>
+</tr>
+<tr>
+<td><code>matches(text, pattern)</code></td>
+<td>Checks if text matches pattern</td>
+<td><code>text</code>: Input text<br><code>pattern</code>: Regex pattern</td>
+<td>Boolean</td>
+<td><code>regex.matches("test@example.com", "^[\\w.]+@[\\w.]+\\.[a-z]{2,}$")</code></td>
+</tr>
+<tr>
+<td><code>replaceAll(text, pattern, replacement)</code></td>
+<td>Replaces all matches</td>
+<td><code>text</code>: Input text<br><code>pattern</code>: Regex pattern<br><code>replacement</code>: Replacement text</td>
+<td>Modified text</td>
+<td><code>regex.replaceAll("Hello world", "world", "universe")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_2">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import RegexLib.regex;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>## Find all matches
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>var matches = regex.findAll(&quot;Hello world&quot;, &quot;\\w+&quot;);
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>## Check if a string matches a pattern
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>var isMatch = regex.matches(&quot;test@example.com&quot;, &quot;^[\\w.]+@[\\w.]+\\.[a-z]{2,}$&quot;);
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>## Replace text
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>var newText = regex.replaceAll(&quot;Hello world&quot;, &quot;world&quot;, &quot;universe&quot;);
+</code></pre></div>
+<h3 id="sqlitelib">SQLiteLib</h3>
+<p>Database operations with SQLite.</p>
+<h4 id="namespace-db">Namespace: db</h4>
+<p>Functions for database operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openDB(path)</code></td>
+<td>Opens or creates a database</td>
+<td><code>path</code>: Database file path</td>
+<td>Database connection</td>
+<td><code>db.openDB("mydata.db")</code></td>
+</tr>
+<tr>
+<td><code>runStatement(db, sql)</code></td>
+<td>Executes SQL statement</td>
+<td><code>db</code>: Database connection<br><code>sql</code>: SQL statement</td>
+<td>None</td>
+<td><code>db.runStatement(database, "CREATE TABLE users (id INTEGER, name TEXT)")</code></td>
+</tr>
+<tr>
+<td><code>runQuery(db, sql)</code></td>
+<td>Executes SQL query</td>
+<td><code>db</code>: Database connection<br><code>sql</code>: SQL query</td>
+<td>Query results</td>
+<td><code>db.runQuery(database, "SELECT * FROM users")</code></td>
+</tr>
+<tr>
+<td><code>closeDB(db)</code></td>
+<td>Closes database connection</td>
+<td><code>db</code>: Database connection</td>
+<td>None</td>
+<td><code>db.closeDB(database)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_3">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import SQLiteLib.db;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>## Open or create a database
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>var database = db.openDB(&quot;mydata.db&quot;);
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>## Create a table
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>db.runStatement(database, &quot;CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT)&quot;);
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>## Insert data
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>db.runStatement(database, &quot;INSERT INTO users VALUES (1, &#39;John&#39;)&quot;);
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>## Query data
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>var results = db.runQuery(database, &quot;SELECT * FROM users&quot;);
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>print(results);
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>## Close the database
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>db.closeDB(database);
+</code></pre></div>
+<h3 id="datetime">DateTime</h3>
+<p>Date and time functions.</p>
+<h4 id="namespace-timestamp">Namespace: timestamp</h4>
+<p>Functions for working with timestamps.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>currentTimeMillis()</code></td>
+<td>Gets current time in milliseconds</td>
+<td>None</td>
+<td>Current timestamp</td>
+<td><code>timestamp.currentTimeMillis()</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-date">Namespace: date</h4>
+<p>Functions for working with dates.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getYear()</code></td>
+<td>Gets current year</td>
+<td>None</td>
+<td>Current year</td>
+<td><code>date.getYear()</code></td>
+</tr>
+<tr>
+<td><code>getMonth()</code></td>
+<td>Gets current month</td>
+<td>None</td>
+<td>Current month (1-12)</td>
+<td><code>date.getMonth()</code></td>
+</tr>
+<tr>
+<td><code>getDay()</code></td>
+<td>Gets current day</td>
+<td>None</td>
+<td>Current day of month</td>
+<td><code>date.getDay()</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-time">Namespace: time</h4>
+<p>Functions for working with time.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getHour()</code></td>
+<td>Gets current hour</td>
+<td>None</td>
+<td>Current hour (0-23)</td>
+<td><code>time.getHour()</code></td>
+</tr>
+<tr>
+<td><code>getMinute()</code></td>
+<td>Gets current minute</td>
+<td>None</td>
+<td>Current minute (0-59)</td>
+<td><code>time.getMinute()</code></td>
+</tr>
+<tr>
+<td><code>getSecond()</code></td>
+<td>Gets current second</td>
+<td>None</td>
+<td>Current second (0-59)</td>
+<td><code>time.getSecond()</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_4">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import DateTime.timestamp;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>import DateTime.date;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>import DateTime.time;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>## Get current timestamp
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>var now = timestamp.currentTimeMillis();
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>## Get date components
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>var year = date.getYear();
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>var month = date.getMonth();
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>var day = date.getDay();
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>## Get time components
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>var hour = time.getHour();
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>var minute = time.getMinute();
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>var second = time.getSecond();
+</code></pre></div>
+<h3 id="io">IO</h3>
+<p>File and console input/output operations.</p>
+<h4 id="namespace-file">Namespace: File</h4>
+<p>Functions for file operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>readFile(path)</code></td>
+<td>Reads file contents</td>
+<td><code>path</code>: File path</td>
+<td>File contents as string</td>
+<td><code>File.readFile("input.txt")</code></td>
+</tr>
+<tr>
+<td><code>writeFile(path, content)</code></td>
+<td>Writes to a file</td>
+<td><code>path</code>: File path<br><code>content</code>: Content to write</td>
+<td>None</td>
+<td><code>File.writeFile("output.txt", "Hello, world!")</code></td>
+</tr>
+<tr>
+<td><code>appendToFile(path, content)</code></td>
+<td>Appends to a file</td>
+<td><code>path</code>: File path<br><code>content</code>: Content to append</td>
+<td>None</td>
+<td><code>File.appendToFile("log.txt", "Program executed")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-prompt">Namespace: Prompt</h4>
+<p>Functions for user input.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input(prompt)</code></td>
+<td>Gets user input</td>
+<td><code>prompt</code>: Text to display</td>
+<td>User input as string</td>
+<td><code>Prompt.input("Enter your name: ")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_5">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import IO.File;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>import IO.Prompt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>## Read user input
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>var name = Prompt.input(&quot;Enter your name: &quot;);
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>print(&quot;Hello, &quot; + name);
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>## File operations
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>File.writeFile(&quot;output.txt&quot;, &quot;Hello, world!&quot;);
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>var content = File.readFile(&quot;input.txt&quot;);
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>File.appendToFile(&quot;log.txt&quot;, &quot;Program executed at &quot; + DateTime.timestamp.currentTimeMillis());
+</code></pre></div>
+<h3 id="oslib">OSLib</h3>
+<p>Operating system information and environment variables.</p>
+<h4 id="namespace-sys">Namespace: sys</h4>
+<p>Functions for system information.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getOSName()</code></td>
+<td>Gets operating system name</td>
+<td>None</td>
+<td>OS name as string</td>
+<td><code>sys.getOSName()</code></td>
+</tr>
+<tr>
+<td><code>getUserHome()</code></td>
+<td>Gets user home directory</td>
+<td>None</td>
+<td>Path as string</td>
+<td><code>sys.getUserHome()</code></td>
+</tr>
+<tr>
+<td><code>getUserDir()</code></td>
+<td>Gets current directory</td>
+<td>None</td>
+<td>Path as string</td>
+<td><code>sys.getUserDir()</code></td>
+</tr>
+<tr>
+<td><code>getEnv(name)</code></td>
+<td>Gets environment variable</td>
+<td><code>name</code>: Variable name</td>
+<td>Variable value</td>
+<td><code>sys.getEnv("PATH")</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_6">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>import OSLib.sys;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>## Get OS information
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>var osName = sys.getOSName();
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>print(&quot;Running on: &quot; + osName);
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>## Get environment variables
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>var homePath = sys.getUserHome();
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>var currentDir = sys.getUserDir();
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>var envVar = sys.getEnv(&quot;PATH&quot;);
+</code></pre></div>
+<h3 id="arrays">Arrays</h3>
+<p>Array manipulation utilities.</p>
+<h4 id="namespace-array">Namespace: array</h4>
+<p>Functions for working with arrays.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getLength(arr)</code></td>
+<td>Gets array length</td>
+<td><code>arr</code>: Array</td>
+<td>Length as integer</td>
+<td><code>array.getLength(myArray)</code></td>
+</tr>
+<tr>
+<td><code>push(arr, item)</code></td>
+<td>Adds item to end of array</td>
+<td><code>arr</code>: Array<br><code>item</code>: Item to add</td>
+<td>Modified array</td>
+<td><code>array.push(myArray, 4)</code></td>
+</tr>
+<tr>
+<td><code>pop(arr)</code></td>
+<td>Removes last item from array</td>
+<td><code>arr</code>: Array</td>
+<td>Removed item</td>
+<td><code>array.pop(myArray)</code></td>
+</tr>
+<tr>
+<td><code>unshift(arr, item)</code></td>
+<td>Adds item to start of array</td>
+<td><code>arr</code>: Array<br><code>item</code>: Item to add</td>
+<td>Modified array</td>
+<td><code>array.unshift(myArray, 0)</code></td>
+</tr>
+<tr>
+<td><code>shift(arr)</code></td>
+<td>Removes first item from array</td>
+<td><code>arr</code>: Array</td>
+<td>Removed item</td>
+<td><code>array.shift(myArray)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_7">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>import Arrays.array;
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>## Create an array
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>var myArray = [1, 2, 3];
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>## Get array length
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>var length = array.getLength(myArray);
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>## Modify arrays
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>array.push(myArray, 4);  ## Add to end: [1, 2, 3, 4]
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>var lastItem = array.pop(myArray);  ## Remove from end: [1, 2, 3]
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>array.unshift(myArray, 0);  ## Add to beginning: [0, 1, 2, 3]
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>var firstItem = array.shift(myArray);  ## Remove from beginning: [1, 2, 3]
+</code></pre></div>
+<h3 id="util">Util</h3>
+<p>Utility functions for type conversion and string operations.</p>
+<h4 id="namespace-type">Namespace: Type</h4>
+<p>Functions for type checking.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getType(value)</code></td>
+<td>Gets type of a value</td>
+<td><code>value</code>: Any value</td>
+<td>Type as string</td>
+<td><code>Type.getType("Hello")</code> → <code>"string"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-string">Namespace: String</h4>
+<p>Functions for string operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toString(value)</code></td>
+<td>Converts value to string</td>
+<td><code>value</code>: Any value</td>
+<td>String representation</td>
+<td><code>String.toString(123)</code> → <code>"123"</code></td>
+</tr>
+<tr>
+<td><code>stringLength(str)</code></td>
+<td>Gets string length</td>
+<td><code>str</code>: String</td>
+<td>Length as integer</td>
+<td><code>String.stringLength("Hello")</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>indexOf(str, substr)</code></td>
+<td>Finds position of substring</td>
+<td><code>str</code>: String<br><code>substr</code>: Substring to find</td>
+<td>Position as integer</td>
+<td><code>String.indexOf("Hello World", "World")</code> → <code>6</code></td>
+</tr>
+<tr>
+<td><code>substring(str, start, end)</code></td>
+<td>Extracts part of string</td>
+<td><code>str</code>: String<br><code>start</code>: Start index<br><code>end</code>: End index</td>
+<td>Substring</td>
+<td><code>String.substring("Hello World", 0, 5)</code> → <code>"Hello"</code></td>
+</tr>
+<tr>
+<td><code>toUpper(str)</code></td>
+<td>Converts string to uppercase</td>
+<td><code>str</code>: String</td>
+<td>Uppercase string</td>
+<td><code>String.toUpper("hello")</code> → <code>"HELLO"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-integer">Namespace: Integer</h4>
+<p>Functions for integer operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toInt(str)</code></td>
+<td>Converts string to integer</td>
+<td><code>str</code>: String</td>
+<td>Integer value</td>
+<td><code>Integer.toInt("42")</code> → <code>42</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-double">Namespace: Double</h4>
+<p>Functions for double operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toDouble(str)</code></td>
+<td>Converts string to double</td>
+<td><code>str</code>: String</td>
+<td>Double value</td>
+<td><code>Double.toDouble("3.14")</code> → <code>3.14</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="namespace-boolean">Namespace: Boolean</h4>
+<p>Functions for boolean operations.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toBoolean(str)</code></td>
+<td>Converts string to boolean</td>
+<td><code>str</code>: String</td>
+<td>Boolean value</td>
+<td><code>Boolean.toBoolean("true")</code> → <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_8">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import Util.Type;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>import Util.String;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>import Util.Integer;
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>import Util.Double;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>import Util.Boolean;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>## Type checking
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>var type = Type.getType(&quot;Hello&quot;);  ## Returns &quot;string&quot;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>## Type conversion
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>var intValue = Integer.toInt(&quot;42&quot;);
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>var doubleValue = Double.toDouble(&quot;3.14&quot;);
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>var boolValue = Boolean.toBoolean(&quot;true&quot;);
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>var strValue = String.toString(123);
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>## String operations
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>var length = String.stringLength(&quot;Hello&quot;);
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>var position = String.indexOf(&quot;Hello World&quot;, &quot;World&quot;);
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>var part = String.substring(&quot;Hello World&quot;, 0, 5);
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>var upper = String.toUpper(&quot;hello&quot;);
+</code></pre></div>
+<h3 id="random">Random</h3>
+<p>Random number generation.</p>
+<h4 id="namespace-number">Namespace: number</h4>
+<p>Functions for generating random numbers.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Return Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getRandomInt(min, max)</code></td>
+<td>Generates random integer</td>
+<td><code>min</code>: Minimum value<br><code>max</code>: Maximum value</td>
+<td>Random integer</td>
+<td><code>number.getRandomInt(1, 100)</code></td>
+</tr>
+<tr>
+<td><code>getRandomDouble(min, max)</code></td>
+<td>Generates random double</td>
+<td><code>min</code>: Minimum value<br><code>max</code>: Maximum value</td>
+<td>Random double</td>
+<td><code>number.getRandomDouble(0, 1)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-example_9">Usage Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>import Random.number;
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>## Generate random numbers
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>var randomInt = number.getRandomInt(1, 100);  ## Random integer between 1 and 100
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>var randomDouble = number.getRandomDouble(0, 1);  ## Random double between 0 and 1
+</code></pre></div>
+<h2 id="creating-custom-libraries">Creating Custom Libraries</h2>
+<p>You can create your own libraries using the <code>library</code> keyword:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>library MyLibrary {
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    namespace utils {
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        function greet(name) {
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>            return &quot;Hello, &quot; + name + &quot;!&quot;;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        }
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        function farewell(name) {
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>            return &quot;Goodbye, &quot; + name + &quot;!&quot;;
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        }
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    }
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    namespace math {
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>        function square(x) {
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>            return x * x;
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        }
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    }
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>}
+</code></pre></div>
+<p>Save this code in a file with the <code>.vglib</code> extension in the <code>libraries</code> or <code>projects/packages</code> directory to make it available for import in your VG programs.</p>
+<h2 id="library-documentation">Library Documentation</h2>
+<p>When creating libraries, it's good practice to document your functions using documentation comments:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>library MyLibrary {
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    /## Utility functions for common operations
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    # This namespace contains helper functions for everyday tasks.
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    # @author Your Name
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    ##/
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    namespace utils {
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        /## Greets a person by name
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        # @param name The name of the person to greet
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        # @return A greeting message
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        ##/
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        function greet(name) {
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>            return &quot;Hello, &quot; + name + &quot;!&quot;;
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        }
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    }
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>}
+</code></pre></div>
+<h2 id="system-calls-in-libraries">System Calls in Libraries</h2>
+<p>Libraries often use system calls to access Java functionality. These calls are restricted to a whitelist of allowed classes and methods defined in the configuration file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>## Example of a system call in a library function
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>function currentTimeMillis() {
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    return VgSystemCall(&quot;java.lang.System&quot;, &quot;currentTimeMillis&quot;);
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>}
+</code></pre></div>
+<h2 id="library-namespaces">Library Namespaces</h2>
+<p>Libraries can contain multiple namespaces to organize related functionality:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>library MyLibrary {
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    namespace math {
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        ## Math-related functions
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    }
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    namespace string {
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        ## String manipulation functions
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    }
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    namespace file {
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        ## File handling functions
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    }
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>}
+</code></pre></div>
+<p>To use functions from different namespaces, import each namespace separately:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>import MyLibrary.math;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>import MyLibrary.string;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>var squared = math.square(5);
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>var reversed = string.reverse(&quot;Hello&quot;);
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
